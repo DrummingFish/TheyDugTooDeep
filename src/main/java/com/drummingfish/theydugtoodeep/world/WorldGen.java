@@ -12,7 +12,7 @@ public class WorldGen implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-        switch(world.provider.dimensionId){
+        switch(world.provider.dimensionId) {
         case -1:
             generateNether(world, random, chunkX * 16, chunkZ * 16);
             break;
@@ -28,7 +28,7 @@ public class WorldGen implements IWorldGenerator {
 	private void generateEnd(World world, Random rand, int chunkX, int chunkZ) {}
 
 	private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
-        for(int k = 0; k < 10; k++){
+        for(int k = 0; k < 10; k++) {
         	int permaIceXCoord = chunkX + rand.nextInt(16);
         	int permaIceYCoord = rand.nextInt(8);
         	int permaIceZCoord = chunkZ + rand.nextInt(16);
