@@ -2,6 +2,9 @@ package com.drummingfish.theydugtoodeep.item;
 
 import com.drummingfish.theydugtoodeep.TheyDugTooDeep;
 import com.drummingfish.theydugtoodeep.tab.TheyDugTooDeepTab;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -24,5 +27,11 @@ public class ItemJournal extends Item {
 
     @Override
     public void onUpdate(ItemStack item, World world, Entity entity, int integer, boolean bool) {
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister register) {
+        itemIcon = register.registerIcon(ItemInfo.TEXTURE_LOCATION + ":" + ItemInfo.JOURNAL_ICON);
     }
 }

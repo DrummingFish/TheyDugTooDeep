@@ -6,4 +6,5 @@ public class ItemInfo {
 
     public static final String JOURNAL_KEY = "journal";
     public static final String JOURNAL_UNLOCALIZED_NAME = "journal";
+    public static final String JOURNAL_ICON = "journal";
 }
